@@ -1,0 +1,52 @@
+<header class="left_view">
+  <div class="left_content tukutter_icon">
+    <%= link_to tukutters_path do %>
+      <%= fa_icon("twitter 2x", class: "icon left_icon left_tukutter_icon") %>
+    <% end %>
+  </div>
+  <div class="left_content home">
+    <%= link_to tukutters_path do %>
+      <%= fa_icon("home 2x", text: "ホーム　", class: "icon left_icon") %>
+    <% end %>
+  </div>
+  <div class="left_content name">
+    <%= fa_icon("user-circle 2x", text: "hayashi", class: "user_icon left_icon") %>
+  </div>
+</header>
+
+<div class="container">
+  <div class="center_view">
+    <%= render 'form' %>
+    <hr class="form_under_line">
+    <% if flash[:notice] %>
+      <div class="flash_msg">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <% @posts.each do |post| %>
+      <div class="tukutter_content">
+        <div class="tukutter_content_left">
+          <%= fa_icon("user-circle 4x", class: "user_icon user_post_icon") %>
+        </div>
+        <div class="tukutter_content_right">
+          <span class="tukutter_name">hayashi</span>　<span class="created_at"><%= time_ago_in_words(post.created_at) %></span>
+          <div class="tukutter_coment">
+            <%= post.content %>
+          </div>
+          <div class="edit_or_delete">
+            <%= link_to edit_tukutter_path(post.id) do %>
+              <%= fa_icon("edit", class: "user_icon edit_icon") %>
+            <% end %>
+            <%= link_to tukutter_path(post.id), method: :delete, data: {confirm: '本当に削除していいですか？'} do %>
+              <%= fa_icon("trash", class: "user_icon") %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr class="post_under_line">
+    <% end %>
+  </div>
+
+  <footer class="right_view">
+  </footer>
+</div>

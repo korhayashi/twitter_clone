@@ -1,0 +1,191 @@
+$line-color: #E6ECF0;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  heigt: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.form {
+  display: flex;
+  padding: 10px;
+}
+
+.left_view {
+  padding-left: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.left_content {
+  margin-bottom: 5px;
+  a {
+    display: inline-block;
+    transition: 0.2s;
+    &:hover {
+      background-color: #E7F5FD;
+      border-radius: 60px;
+    }
+    &:active {
+      background-color: #D0ECFC;
+    }
+  }
+}
+
+.tukutter_icon {
+  margin-top: 10px;
+}
+
+.icon {
+  color: #14A1EF;
+}
+
+.user_icon {
+  color: #657785;
+}
+
+.left_icon {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #14A1EF;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.2s;
+  &:hover {
+    cursor: pointer;
+    background-color: darken(#14A1EF, 5%);
+  }
+  &:active {
+    background-color: darken(#14A1EF, 10%);
+  }
+}
+
+.submit_btn {
+  padding: 10px 20px;
+  border: 0px;
+}
+
+textarea {
+  border: 0px;
+  resize: none;
+  width: 530px;
+  height: 50px;
+  font-size: 1.7rem;
+}
+
+.menu_icon {
+  width: 29.72px;
+}
+
+.center_view {
+  width: 45%;
+  // margin: 0;
+  border-left: $line-color solid 1px;
+  border-right: $line-color solid 1px;
+}
+
+.form_under_line {
+  height: 10px;
+  background-color: $line-color;
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+
+.post_under_line {
+  height: 1px;
+  background-color: $line-color;
+  width: 100%;
+  border: none;
+}
+
+.user_form_icon {
+  margin-right: 10px;
+}
+
+.tukutter_content {
+  display: flex;
+  width: 98%;
+  margin: 10px;
+}
+
+.post_btn {
+  text-align: right;
+}
+
+.user_post_icon {
+  margin-right: 10px;
+}
+
+.tukutter_name {
+  font-weight: bold;
+}
+
+.created_at {
+  font-size: 1.2rem;
+  color: #657785;
+}
+
+.edit_or_delete {
+  padding: 5px 0;
+}
+
+.edit_icon {
+  margin-right: 50px;
+}
+
+.right_view {
+  width: 30%;
+  min-height: 100vh;
+  background-image: url('bg-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+
+.confirm {
+  margin: 20px;
+}
+
+.link a {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.error_msg p {
+  text-align: center;
+  background-color: $line-color;
+  padding: 10px;
+}
